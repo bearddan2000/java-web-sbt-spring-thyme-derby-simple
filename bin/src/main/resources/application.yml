@@ -1,0 +1,23 @@
+#######################
+# Spring boot properties
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+########################
+
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+
+  datasource:
+    url: jdbc:derby:memory:animal;create=true
+    driver-class-name: org.apache.derby.jdbc.EmbeddedDriver
+
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        id:
+          new_generator_mappings: false
+        ddl-auto: update
+        dialect: org.hibernate.dialect.DerbyDialect
+    show-sql: false
